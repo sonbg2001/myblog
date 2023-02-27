@@ -1,6 +1,12 @@
 
 :root {
-    --primary-color: green;
+    --primary-color: #00bcd5;
+    --text--color: #fff;
+    --black-color: #000;
+}
+
+* {
+    box-sizing: border-box;
 }
 ul {
     list-style: none;
@@ -11,22 +17,17 @@ ul li h2 {
     text-transform: uppercase;
 }
 
-.didve{
-    content: "";
-    width: 80%;
-    height: 3px;
-    color: red;
-    border-top: 1px solid var(--primary-color);
-}
+
 
 .app {
     padding: 0 80px;
     display: flex;    
 }
 .left-app {
-    background-color: rgb(231 231 231);
+    background-color: var(--primary-color);
+    color: var(--text--color);
     width: 40%;
-
+    overflow: hidden;
 }
 .left-app, .right-app {
     display: flex;
@@ -41,7 +42,8 @@ ul li h2 {
 }
 
 #header-name h1 {
-    color: var(--primary-color);
+    color: var(--text--color);
+
 }
 .avatar-container {
     margin: 20px;
@@ -68,11 +70,47 @@ ul li h2 {
 }
 
 .content {
-    color: #000;
     width: 100%;
     margin-left: 60px;
+    color: var(--text--color);
 }
 
-.content-title {
-    color: var(--primary-color);
+.right-app .content {
+    color: var(--black-color);
+
 }
+.right-app .content .content-title {
+    color: var(--primary-color);
+
+}
+.content-title {
+    display: flex;
+    padding-bottom: 6px;
+    border-bottom: 3px solid var(--primary-color);
+}
+.content-title-icon {
+    background-color: var(--primary-color);
+    color: var(--text--color);
+    border-radius: 50%;
+    font-size: 22px;
+    padding: 3px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+}
+
+.content-item {
+    display: flex;
+    align-items: center;
+}
+
+.content-item i {
+    margin-right: 10px;
+}
+.content-item h4 {
+    margin: 10px 0;
+}
+
